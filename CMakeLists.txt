@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.12)
 project(emscripten_webgl)
 
-find_package(OpenGL REQUIRED)
-
 if("${CMAKE_SYSTEM}" MATCHES "Linux" OR "${CMAKE_SYSTEM}" MATCHES "Darwin-*")
+
+    find_package(OpenGL REQUIRED)
+
     set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
     set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
     set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
