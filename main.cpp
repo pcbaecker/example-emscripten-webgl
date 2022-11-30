@@ -74,7 +74,7 @@ int main() {
 
     std::cout << "Going into loop" << std::endl;
 #ifdef EMSCRIPTEN
-    // Define a mail loop function, that will be called as fast as possible
+    // Define a main loop function, that will be called as fast as possible
     emscripten_set_main_loop(&mainLoop, 0, 1);
 #else
     // This is the normal C/C++ main loop
